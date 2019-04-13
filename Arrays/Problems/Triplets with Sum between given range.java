@@ -75,39 +75,7 @@ public class Solution {
             }
         }
 
-        // Case 6
-        List<Double> lowerFirst = new ArrayList<>();
-        List<Double> lowerSec = new ArrayList<>();
-
-        for (Double d : lowerRangeList) {
-            if (d < 0.5) {
-                lowerFirst.add(d);
-            }
-            else {
-                lowerSec.add(d);
-            }
-        }
-
-        if (!lowerFirst.isEmpty() && !lowerSec.isEmpty() && !middleRangeList.isEmpty()) {
-            sum = lowerFirst.get(0) + lowerSec.get(0) + middleRangeList.get(0);
-            if (sum > 1 && sum < 2) {
-                return 1;
-            }
-        }
-
-        if (lowerSec.size() > 1 && !middleRangeList.isEmpty()) {
-            sum = lowerSec.get(0) + lowerSec.get(1) + middleRangeList.get(0);
-            if (sum > 1 && sum < 2) {
-                return 1;
-            }
-        }
-
-        if (!lowerFirst.isEmpty() && !lowerSec.isEmpty() && !middleRangeList.isEmpty()) {
-            sum = lowerFirst.get(lowerFirst.size()-1) + lowerSec.get(lowerSec.size()-1) + middleRangeList.get(middleSetSize-1);
-            if (sum > 1 && sum < 2) {
-                return 1;
-            }
-        }
+      
 
         return 0;
     }
